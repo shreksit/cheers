@@ -1,0 +1,84 @@
+﻿main {
+    flex: 1; /* הגדרת הגמישות של האלמנט בתוך תיבת הפריסה */
+    padding-top: 100px; /* ריווח פנימי עליון כדי לשלוט במרווח */
+    background-color: #FFFFD7; /* צבע רקע */
+    text-align: center; /* יישור מרכזי של הטקסט */
+    margin-bottom: 200px; /* הוספת שוליים תחתונים כדי ליצור מרווח בין התוכן הראשי לפוטר */
+}
+
+.site-map-title {
+    font-family: 'GveretLevinAlefAlefAlef', Arial, sans-serif; /* פונט הכותרת */
+    font-size: 45px; /* גודל טקסט */
+    color: #6A007C; /* צבע טקסט */
+    text-align: center; /* יישור מרכזי של הטקסט */
+    margin-top: 10px; /* ריווח עליון */
+}
+
+.site-map-description {
+    font-family: 'Rubik', Arial, sans-serif; /* פונט התיאור */
+    font-size: 20px; /* גודל טקסט */
+    color: #333; /* צבע טקסט */
+    text-align: center; /* יישור מרכזי של הטקסט */
+    margin: 10px auto; /* ריווח עליון ותחתון */
+    width: 60%; /* רוחב של 60% */
+    line-height: 1.6; /* גובה שורה */
+}
+
+.grid-container {
+    display: grid; /* שימוש בגריד לפריסה */
+    grid-template-columns: repeat(6, 1fr); /* הגדרת גריד של 6 עמודות */
+    gap: 20px; /* מרווח בין האלמנטים */
+    width: 80%; /* רוחב של 80% */
+    margin: 0 auto; /* מרכוז */
+}
+
+.grid-item, .sub-item {
+    background-color: #e0f7fa; /* צבע רקע */
+    padding: 20px; /* ריווח פנימי */
+    border-radius: 10px; /* פינות מעוגלות */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* הצללה */
+    text-align: center; /* יישור מרכזי של הטקסט */
+    position: relative; /* מיקום יחסי */
+}
+
+    .grid-item a, .sub-item a {
+        text-decoration: none; /* הסרת קו תחתי */
+        color: #6A007C; /* צבע טקסט מעודכן */
+        font-family: 'GveretLevinAlefAlefAlef', Arial, sans-serif; /* פונט */
+        font-size: 18px; /* גודל טקסט */
+    }
+
+        .grid-item a:hover, .sub-item a:hover {
+            color: #004d40; /* צבע טקסט בהובר */
+        }
+
+.home-page {
+    grid-column: span 6; /* פריסה על כל רוחב הגריד */
+    padding: 40px; /* הגדלת גובה הפריט */
+}
+
+.sub-items {
+    display: none; /* הסתרה כברירת מחדל */
+    flex-direction: column; /* כיוון פריסה אנכית */
+    align-items: center; /* יישור מרכזי */
+    position: absolute; /* מיקום מוחלט */
+    top: 100%; /* מיקום מתחת לפריט הראשי */
+    left: 0; /* מיקום שמאלה */
+    width: 100%; /* רוחב מלא */
+}
+
+.sub-item {
+    background-color: #b2dfdb; /* צבע רקע מקורי */
+    padding: 10px; /* הקטנת ריווח פנימי כדי להקטין את גודל הפריטים */
+    margin-top: 10px; /* ריווח עליון בין הפריטים */
+    width: 100%; /* התאמת רוחב לרוחב הפריט האב */
+}
+
+.prepare-cocktail:hover .sub-items {
+    display: flex; /* הצגה על רחף */
+}
+
+.arrow {
+    margin-left: 5px; /* ריווח משמאל */
+    font-size: 16px; /* גודל טקסט */
+}

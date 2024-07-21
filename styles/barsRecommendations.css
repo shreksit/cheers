@@ -1,0 +1,168 @@
+﻿body {
+    background-color: #FFFFD7; /* צבע רקע */
+}
+
+main {
+    flex: 1; /* מאפשר למיכל הראשי להתפרש ולתפוס את כל השטח הפנוי */
+    padding-top: 100px; /* ריווח עליון */
+    background-color: #FFFFD7; /* צבע רקע */
+}
+
+header {
+    background-color: rgba(255, 229, 38, 0.8); /* צבע רקע חצי שקוף */
+    color: black; /* צבע הטקסט */
+    padding: 10px 20px; /* ריווח פנימי */
+    border-radius: 15px; /* פינות מעוגלות */
+    position: fixed; /* מיקום קבוע */
+    top: 10px; /* מרחק מלמעלה */
+    left: 50%; /* מיקום מרכזי */
+    transform: translateX(-50%); /* תזוזה למרכז */
+    width: 90%; /* רוחב */
+    z-index: 1000; /* סדר בשכבות */
+}
+
+    header nav ul {
+        list-style: none; /* ללא עיצוב רשימה */
+        padding: 0; /* ללא ריווח פנימי */
+        margin: 0; /* ללא ריווח חיצוני */
+        display: flex; /* תצוגת flex */
+        justify-content: space-around; /* ריווח שווה בין הפריטים */
+        align-items: center; /* יישור למרכז אנכי */
+    }
+
+        header nav ul li {
+            display: inline; /* תצוגת inline */
+            margin-right: 15px; /* ריווח ימני */
+        }
+
+            header nav ul li a {
+                color: black; /* צבע הטקסט */
+                text-decoration: none; /* ללא קו תחתון */
+                font-family: 'GveretLevinAlefAlefAlef', Arial, sans-serif; /* הגדרת פונט */
+            }
+
+                header nav ul li a.active {
+                    color: #D12E71; /* צבע הטקסט */
+                    font-size: 18px; /* גודל הטקסט */
+                }
+
+            header nav ul li img.search-icon {
+                width: 20px; /* רוחב התמונה */
+                height: auto; /* גובה אוטומטי */
+            }
+
+.logo {
+    width: 50px; /* רוחב הלוגו */
+    height: auto; /* גובה אוטומטי */
+}
+
+.bars-title {
+    font-family: 'GveretLevinAlefAlefAlef', Arial, sans-serif; /* הגדרת פונט */
+    font-size: 36px; /* גודל הפונט */
+    color: #6A007C; /* צבע הפונט */
+    text-align: center; /* יישור למרכז */
+    margin-top: 10px; /* ריווח עליון */
+}
+
+.bars-container {
+    display: grid; /* תצוגת grid */
+    grid-template-columns: repeat(2, 1fr); /* עמודות בשוויון מקום */
+    gap: 40px 20px; /* ריווח בין העמודות */
+    justify-content: center; /* יישור למרכז */
+    align-items: center; /* יישור אנכי למרכז */
+    padding: 20px; /* ריווח פנימי */
+    margin: 0 auto; /* ריווח אוטומטי מימין ומשמאל */
+    max-width: 750px; /* רוחב מקסימלי */
+}
+
+.bar-card {
+    width: 350px; /* רוחב הכרטיס */
+    height: 250px; /* גובה הכרטיס */
+    perspective: 1000px; /* מרחק פרספקטיבה */
+}
+
+.bar-card-inner {
+    position: relative; /* מיקום יחסי */
+    width: 100%; /* רוחב מלא */
+    height: 100%; /* גובה מלא */
+    text-align: center; /* יישור למרכז */
+    transition: transform 0.6s; /* מעבר חלק */
+    transform-style: preserve-3d; /* שמירה על תלת ממד */
+    display: flex; /* תצוגת flex */
+    justify-content: center; /* יישור למרכז אופקי */
+    align-items: center; /* יישור למרכז אנכי */
+}
+
+.bar-card:hover .bar-card-inner {
+    transform: rotateY(180deg); /* סיבוב הכרטיס */
+}
+
+.bar-card-front, .bar-card-back {
+    position: absolute; /* מיקום מוחלט */
+    width: 100%; /* רוחב מלא */
+    height: 100%; /* גובה מלא */
+    backface-visibility: hidden; /* הסתרת גב הכרטיס */
+    border-radius: 15px; /* פינות מעוגלות */
+}
+
+.bar-card-front {
+    background-color: #6A007C; /* צבע רקע קדמי */
+    display: flex; /* תצוגת flex */
+    flex-direction: column; /* סידור בעמודה */
+    justify-content: space-between; /* ריווח שווה בין פריטים */
+}
+
+.bar-image {
+    height: 100%; /* גובה מלא */
+    width: 100%; /* רוחב מלא */
+    background-size: cover; /* התאמת גודל התמונה */
+    background-repeat: no-repeat; /* מניעת חזרה על התמונה */
+    background-position: center; /* מיקום התמונה במרכז */
+    border-top-left-radius: 15px; /* פינות מעוגלות */
+    border-top-right-radius: 15px; /* פינות מעוגלות */
+    margin-bottom: 0; /* ללא ריווח תחתון */
+}
+
+    .bar-image.bellboy {
+        background-position: top; /* מיקום תמונת Bell Boy למעלה */
+    }
+
+.bar-name {
+    background-color: #F5E0FF; /* צבע רקע */
+    color: #6A007C; /* צבע הטקסט */
+    font-family: 'GveretLevinAlefAlefAlef', Arial, sans-serif; /* הגדרת פונט */
+    padding: 20px; /* ריווח פנימי */
+    border-bottom-left-radius: 15px; /* פינות מעוגלות */
+    border-bottom-right-radius: 15px; /* פינות מעוגלות */
+}
+
+.bar-card-back {
+    background-color: #F5E0FF; /* צבע רקע אחורי */
+    color: #6A007C; /* צבע הטקסט */
+    font-family: 'Rubik', Arial, sans-serif; /* הגדרת פונט */
+    display: flex; /* תצוגת flex */
+    justify-content: center; /* יישור למרכז אופקי */
+    align-items: center; /* יישור למרכז אנכי */
+    transform: rotateY(180deg); /* סיבוב הכרטיס */
+    border-radius: 15px; /* פינות מעוגלות */
+    padding: 20px; /* ריווח פנימי */
+    text-align: center; /* יישור טקסט למרכז */
+}
+
+.bar-info {
+    margin: 0; /* ללא ריווח */
+}
+
+    .bar-info .address {
+        font-weight: bold; /* טקסט מודגש */
+        font-size: 18px; /* גודל הפונט */
+        margin-bottom: 10px; /* ריווח תחתון */
+    }
+
+    .bar-info .hours {
+        margin-top: 10px; /* ריווח עליון */
+    }
+
+footer {
+    margin-top: 50px; /* ריווח עליון */
+}

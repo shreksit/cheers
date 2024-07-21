@@ -1,0 +1,149 @@
+﻿main {
+    flex: 1; /* מאפשר למיכל הראשי להתפרש ולתפוס את כל השטח הפנוי */
+    background-color: #FFFFD7; /* צבע רקע */
+}
+
+#hero {
+    display: flex; /* הגדרת תצוגה כ-flexbox */
+    flex-direction: column; /* סידור פריטים בעמודה */
+    justify-content: center; /* יישור התוכן למרכז בציר האנכי */
+    align-items: center; /* יישור התוכן למרכז בציר האופקי */
+    background-image: url('../images/bg-for-hero.png'); /* תמונת רקע */
+    background-size: cover; /* התאמת גודל התמונה לכיסוי המלא */
+    background-position: center bottom; /* מיקום התמונה */
+    height: 100vh; /* גובה מלא של חלון הצפייה */
+    position: relative; /* מיקום יחסי */
+}
+
+.hero-text {
+    text-align: center; /* יישור טקסט למרכז */
+    color: white; /* צבע הטקסט */
+}
+
+    .hero-text h1 {
+        font-family: 'GveretLevinAlefAlefAlef', Arial, sans-serif; /* הגדרת הפונט */
+        font-size: 75px; /* גודל הפונט */
+        color: #6A007C; /* צבע הפונט */
+        margin-bottom: 5px; /* ריווח תחתון */
+        margin-top: 20px; /* ריווח עליון */
+    }
+
+.hero-slogan {
+    font-family: 'GveretLevinAlefAlefAlef', Arial, sans-serif; /* הגדרת הפונט */
+    font-size: 50px; /* גודל הפונט */
+    color: #69944D; /* צבע הפונט */
+    margin-bottom: 5px; /* ריווח תחתון */
+    margin-top: 10px; /* ריווח עליון */
+}
+
+.hero-subtext {
+    font-family: 'Rubik', Arial, sans-serif; /* הגדרת הפונט */
+    font-size: 22px; /* גודל הפונט */
+    color: black; /* צבע הפונט */
+    margin-bottom: 20px; /* ריווח תחתון */
+}
+
+.hero-arrow {
+    width: 80px; /* רוחב החץ */
+    height: auto; /* גובה אוטומטי */
+    margin-top: 10px; /* ריווח עליון */
+    cursor: pointer; /* שינוי סמן העכבר ליד */
+}
+
+#find-cocktail {
+    margin-bottom: 60px; /* ריווח תחתון */
+}
+
+.gallery {
+    display: flex; /* הגדרת תצוגה כ-flexbox */
+    justify-content: space-around; /* יישור פריטים בריווח שווה */
+    flex-wrap: wrap; /* עטיפת פריטים לשורות נוספות במידת הצורך */
+    margin-top: 20px; /* ריווח עליון */
+}
+
+.cocktail-item {
+    text-align: center; /* יישור טקסט למרכז */
+}
+
+.cocktail-icon {
+    width: 100px; /* רוחב האייקון */
+    height: auto; /* גובה אוטומטי */
+    margin: 20px; /* ריווח מכל צד */
+    cursor: pointer; /* שינוי סמן העכבר ליד */
+    transition: transform 0.3s; /* מעבר חלק על הובר */
+}
+
+    .cocktail-icon:hover {
+        transform: scale(1.1); /* הגדלה בהובר */
+    }
+
+.cocktail-label {
+    font-family: 'GveretLevinAlefAlefAlef', Arial, sans-serif; /* הגדרת הפונט */
+    font-size: 20px; /* גודל הפונט */
+    color: black; /* צבע הפונט */
+    margin-top: 10px; /* ריווח עליון */
+}
+
+#find-bars {
+    background-image: url('../images/bg-find-bar.png'); /* תמונת רקע */
+    background-size: cover; /* התאמת גודל התמונה לכיסוי המלא */
+    background-position: center top; /* מיקום התמונה */
+    padding: 200px 0 50px 0; /* ריווח פנימי למעלה ולמטה */
+    display: flex; /* הגדרת תצוגה כ-flexbox */
+    flex-direction: column; /* סידור פריטים בעמודה */
+    justify-content: center; /* יישור התוכן למרכז בציר האנכי */
+    align-items: center; /* יישור התוכן למרכז בציר האופקי */
+}
+
+.bars-gallery {
+    display: flex; /* הגדרת תצוגה כ-flexbox */
+    justify-content: space-around; /* יישור פריטים בריווח שווה */
+    flex-wrap: wrap; /* עטיפת פריטים לשורות נוספות במידת הצורך */
+    margin-top: 20px; /* ריווח עליון */
+    width: 100%; /* רוחב מלא */
+    max-width: 1200px; /* רוחב מקסימלי */
+}
+
+.bar-item {
+    background-color: white; /* צבע רקע לבן */
+    border-radius: 10px; /* פינות מעוגלות */
+    padding: 20px; /* ריווח פנימי */
+    width: 200px; /* רוחב הפריט */
+    text-align: center; /* יישור טקסט למרכז */
+    margin: 20px; /* ריווח מכל צד */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* הצללה */
+    transition: transform 0.3s; /* מעבר חלק על הובר */
+    overflow: hidden; /* הסתרת תוכן חורג */
+}
+
+    .bar-item:hover {
+        transform: scale(1.05); /* הגדלה בהובר */
+    }
+
+.bar-image {
+    width: 100%; /* רוחב מלא */
+    height: 150px; /* גובה התמונה */
+    object-fit: cover; /* התאמת התמונה למיכל */
+    border-radius: 10px; /* פינות מעוגלות */
+}
+
+.bar-name {
+    font-family: 'GveretLevinAlefAlefAlef', Arial, sans-serif; /* הגדרת הפונט */
+    font-size: 24px; /* גודל הפונט */
+    color: #0038C4; /* צבע הפונט */
+    margin-bottom: 10px; /* ריווח תחתון */
+}
+
+.bar-button {
+    font-family: 'Rubik', Arial, sans-serif; /* הגדרת הפונט */
+    background-color: #71B5EE; /* צבע רקע לכפתור */
+    color: black; /* צבע הטקסט */
+    padding: 10px 20px; /* ריווח פנימי */
+    border: none; /* הסרת מסגרת */
+    border-radius: 5px; /* פינות מעוגלות */
+    cursor: pointer; /* שינוי סמן העכבר ליד */
+}
+
+    .bar-button:hover {
+        background-color: #5fa3d6; /* שינוי צבע רקע בהובר */
+    }

@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>צ'ירס - צור קשר</title>
+    <link rel="stylesheet" href="../styles/myStyle.css">
+    <link rel="stylesheet" href="../styles/contactUs.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html"><img src="../images/logo.png" class="logo" alt="לוגו של האתר"></a></li>
+                <li><a href="#" class="nav-link">מצא קוקטייל</a></li>
+                <li class="dropdown">
+                    <a href="makeCocktail.html" class="nav-link">הכן קוקטייל</a>
+                    <div class="dropdown-content">
+                        <a href="mojito.html">מוחיטו</a>
+                        <a href="#">מרגריטה</a>
+                        <a href="#">בלאדי מרי</a>
+                    </div>
+                <li><a href="barsRecommendations.html" class="nav-link">המלצות ברים</a></li>
+                <li><a href="contactUs.html" class="nav-link active">צור קשר</a></li>
+                <li><a href="about.html" class="nav-link">אודותינו</a></li>
+                <li><a href="siteMap.html" class="nav-link">מפת אתר</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="title">צור קשר</h2>
+        <div class="card" id="contact-form">
+            <div class="row">
+                <div class="col full-width">
+                    <div class="form-group">
+                        <label for="full-name">שם מלא</label>
+                        <input type="text" id="full-name" placeholder="הכנס שם מלא" required>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="form-group">
+                        <label for="phone">טלפון</label>
+                        <input type="text" id="phone" placeholder="הכנס טלפון" required>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="form-group">
+                        <label for="email">דוא"ל</label>
+                        <input type="email" id="email" placeholder="הכנס דואר אלקטרוני">
+                    </div>
+                </div>
+
+                <div class="col full-width">
+                    <div class="form-group">
+                        <label for="cocktail-preference">מה הטעם המועדף עלייך בקוקטייל</label>
+                        <select id="cocktail-preference" required>
+                            <option value="" disabled selected>בחר טעם</option>
+                            <option value="מתוק">מתוק</option>
+                            <option value="חמוץ">חמוץ</option>
+                            <option value="חריף">חריף</option>
+                            <option value="מבעבע">מבעבע</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col full-width">
+                    <div class="form-group">
+                        <label for="comments">הערה</label>
+                        <textarea id="comments" rows="4" placeholder="הכנס הערות"></textarea>
+                    </div>
+                </div>
+
+                <div class="col full-width centered">
+                    <input type="submit" value="שלח">
+                </div>
+            </div>
+        </div>
+        <div id="success-message" style="display: none; text-align: center; margin-top: 20px;">
+            <p style="font-family: 'GveretLevinAlefAlefAlef', Arial, sans-serif; font-size: 24px; color: #6A007C;">
+                פנייתך הועברה ותענה בהקדם!
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 נועה טננבאום ואופיר שרעבי</p>
+        <p><a href="about.html">אודותינו</a> | <a href="contactUs.html">צור קשר</a> | <a href="siteMap.html">מפת אתר</a></p>
+    </footer>
+
+    <script src="../jScripts/JavaScript.js"></script>
+    <script>
+        document.querySelector('input[type="submit"]').addEventListener('click', function (event) {
+            event.preventDefault(); // מניעת שליחת הטופס כברירת מחדל
+
+            const fullName = document.getElementById('full-name').value; // אחזור ערך משדה "שם מלא"
+            const phone = document.getElementById('phone').value; // אחזור ערך משדה "טלפון"
+            const cocktailPreference = document.getElementById('cocktail-preference').value; // אחזור ערך משדה "מה הטעם המועדף עלייך בקוקטייל"
+
+            if (!fullName || !phone || !cocktailPreference) { // בדיקה אם אחד מהשדות חובה ריק
+                alert('אנא מלא את כל שדות החובה: שם מלא, טלפון וטעם מועדף.'); // הצגת הודעה אם אחד מהשדות חובה ריק
+            } else {
+                document.getElementById('contact-form').style.display = 'none'; // הסתרת הטופס
+                document.getElementById('success-message').style.display = 'block'; // הצגת הודעת הצלחה
+            }
+        });
+    </script>
+</body>
+</html>

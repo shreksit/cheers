@@ -1,0 +1,142 @@
+﻿/* הטמעת פונטים בכל הדפים */
+@font-face {
+    font-family: 'GveretLevinAlefAlefAlef';
+    src: url('../fonts/GveretLevinAlefAlefAlef/GveretLevinAlefAlefAlef-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('../fonts/Rubik/static/Rubik-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* הגדרות כלליות לגוף הדף */
+body {
+    font-family: 'Rubik', Arial, sans-serif; /* הגדרת פונט ברירת המחדל */
+    direction: rtl; /* כיוון כתיבה מימין לשמאל */
+    text-align: right; /* יישור טקסט לימין */
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFD7; /* צבע רקע */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* גובה מינימלי של 100% מגובה החלון */
+}
+
+/* הגדרת סרגל ניווט בכל הדפים */
+header {
+    background-color: rgba(255, 229, 38, 0.8); /* צבע רקע שקוף */
+    color: black;
+    padding: 10px 20px; /* ריווח פנימי */
+    border-radius: 15px; /* פינות מעוגלות */
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%); /* מרכז את הסרגל אופקית */
+    width: 90%;
+    z-index: 1000; /* סדר שכבות גבוה כדי להבטיח שהסרגל יופיע מעל תכנים אחרים */
+}
+
+    /* הגדרת ה-HEADER בכל הדפים */
+    header nav ul {
+        list-style: none; /* הסרת תבליטים מרשימה */
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around; /* ריווח שווה בין פריטים */
+        align-items: center; /* יישור אנכי של הפריטים */
+    }
+
+        header nav ul li {
+            display: inline; /* פריטים ברשימה יוצגו באותו שורה */
+            margin-right: 15px; /* רווח בין פריטים */
+        }
+
+            header nav ul li a {
+                color: black; /* צבע קישורים */
+                text-decoration: none; /* הסרת קו תחתי מקישורים */
+                font-family: 'GveretLevinAlefAlefAlef', Arial, sans-serif; /* הגדרת פונט קישורים */
+            }
+
+                header nav ul li a.active {
+                    color: #D12E71; /* צבע לקישור פעיל */
+                    font-size: 18px; /* גודל טקסט לקישור פעיל */
+                }
+
+            header nav ul li img.search-icon {
+                width: 20px;
+                height: auto;
+            }
+
+.logo {
+    width: 50px; /* רוחב הלוגו */
+    height: auto; /* גובה אוטומטי כדי לשמור על יחס נכון */
+}
+
+/* הגדרת כותרות בכל הדפים */
+h1 {
+    font-family: 'GveretLevinAlefAlefAlef', Arial, sans-serif; /* פונט הכותרת */
+    font-size: 36px; /* גודל טקסט לכותרת */
+    color: #6A007C; /* צבע טקסט */
+    text-align: center; /* יישור טקסט למרכז */
+}
+
+h2 {
+    font-family: 'GveretLevinAlefAlefAlef', Arial, sans-serif; /* פונט הכותרת */
+    font-size: 36px; /* גודל טקסט לכותרת */
+    color: #6A007C; /* צבע טקסט */
+    text-align: center; /* יישור טקסט למרכז */
+    margin-bottom: 20px; /* מרווח תחתון */
+}
+
+/* הגדרת פוטר של כל הדפים */
+footer {
+    background-color: #6A007C; /* צבע רקע לפוטר */
+    color: white; /* צבע טקסט בפוטר */
+    text-align: center; /* יישור טקסט למרכז */
+    padding: 10px 0; /* ריווח פנימי לפוטר */
+    width: 100%;
+    margin-top: auto; /* דוחף את הפוטר לתחתית הדף */
+}
+
+    footer a {
+        color: white; /* צבע קישורים בפוטר */
+        text-decoration: none; /* הסרת קו תחתי מקישורים */
+        margin: 0 10px; /* רווח בין קישורים */
+    }
+
+/* תפריט נפתח ב-HEADER */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none; /* הסתרת תוכן התפריט הנפתח */
+    position: absolute; /* מיקום מוחלט */
+    background-color: #f9f9f9; /* צבע רקע לתפריט הנפתח */
+    min-width: 160px; /* רוחב מינימלי לתפריט הנפתח */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* צל לתפריט הנפתח */
+    z-index: 1; /* סדר שכבות */
+    border-radius: 10px; /* עיגול פינות */
+}
+
+    .dropdown-content a {
+        color: #00796b; /* צבע קישורים בתפריט הנפתח */
+        padding: 12px 16px; /* ריווח פנימי לקישורים */
+        text-decoration: none; /* הסרת קו תחתי מקישורים */
+        display: block; /* קישורים יוצגו בבלוק */
+        text-align: right; /* יישור טקסט לימין */
+        border-radius: 10px; /* עיגול פינות */
+    }
+
+        .dropdown-content a:hover {
+            background-color: #b2dfdb; /* צבע רקע בהובר על קישורים */
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block; /* הצגת התפריט הנפתח כאשר מרחפים עליו */
+}

@@ -1,0 +1,73 @@
+﻿.page-title {
+    font-family: 'GveretLevinAlefAlefAlef', Arial, sans-serif; /* הגדרת הפונט */
+    font-size: 36px; /* גודל הפונט */
+    color: #6A007C; /* צבע הפונט */
+    text-align: center; /* יישור למרכז */
+    margin-top: 100px; /* ריווח עליון לכותרת */
+}
+
+.mojito-container {
+    display: flex; /* הגדרת תצוגה כ-flexbox */
+    align-items: center; /* יישור תוכן במרכז על הציר האנכי */
+    justify-content: center; /* יישור תוכן במרכז על הציר האופקי */
+    background-color: #F0A7A0; /* צבע רקע לקובייה */
+    border-radius: 15px; /* פינות מעוגלות */
+    padding: 20px; /* ריווח פנימי */
+    margin: 40px auto; /* ריווח עליון ותחתון, מרכז על האופקי */
+    max-width: 800px; /* רוחב מקסימלי לקובייה */
+}
+
+.mojito-image {
+    width: 250px; /* רוחב התמונה */
+    height: auto; /* גובה אוטומטי */
+    margin-left: 20px; /* ריווח שמאלי מהתוכן */
+}
+
+.mojito-content {
+    flex: 1; /* הגדרת גמישות */
+    text-align: right; /* יישור לימין */
+}
+
+.how-to-title {
+    font-family: 'GveretLevinAlefAlefAlef', Arial, sans-serif; /* הגדרת הפונט */
+    font-size: 36px; /* גודל הפונט */
+    color: #00796b; /* צבע ירקרק לכותרת */
+    margin-bottom: 10px; /* ריווח תחתון בין הכותרת לתוכן */
+    text-align: right; /* יישור לימין */
+    margin-top: -20px; /* ריווח עליון שלילי להעלאת הכותרת */
+}
+
+.section-title {
+    font-family: 'GveretLevinAlefAlefAlef', Arial, sans-serif; /* הגדרת הפונט */
+    font-size: 20px; /* גודל הפונט */
+    color: #00796b; /* צבע ירקרק לכותרת */
+    margin-top: 20px; /* ריווח עליון מעל הכותרת */
+}
+
+.ingredients, .preparation {
+    font-family: 'Rubik', Arial, sans-serif; /* הגדרת הפונט */
+    font-size: 14px; /* גודל הפונט */
+    color: #000; /* צבע הטקסט */
+    margin-top: 10px; /* ריווח עליון */
+    padding-right: 20px; /* ריווח ימני לרשימות */
+}
+
+@media (max-width: 768px) {
+    .mojito-container {
+        flex-direction: column; /* שינוי כיוון התצוגה לעמודה */
+        align-items: center; /* יישור תוכן במרכז על הציר האופקי */
+    }
+
+    .mojito-image {
+        margin-left: 0; /* ביטול הריווח השמאלי */
+        margin-bottom: 20px; /* ריווח תחתון */
+    }
+
+    .mojito-content {
+        text-align: center; /* יישור למרכז */
+    }
+
+    .how-to-title {
+        text-align: center; /* יישור למרכז במסכים קטנים */
+    }
+}

@@ -1,0 +1,119 @@
+﻿main {
+    flex: 1; /* הפריסה תופסת את כל הגובה הזמין */
+    padding-top: 100px; /* ריווח פנימי עליון */
+    background-color: #FFFFD7; /* צבע רקע */
+}
+
+* {
+    margin: 0; /* הסרת שוליים ברירת מחדל */
+    padding: 0; /* הסרת רווח פנימי ברירת מחדל */
+    box-sizing: border-box; /* הכנסת שוליים ורווחים פנימיים לחישוב גודל התיבה */
+}
+
+.title {
+    font-family: 'GveretLevinAlefAlefAlef', Arial, sans-serif; /* הגדרת פונט */
+    font-size: 36px; /* גודל טקסט */
+    color: #6A007C; /* צבע טקסט */
+    text-align: center; /* יישור טקסט למרכז */
+    margin: 20px 0; /* ריווח עליון ותחתון */
+}
+
+.card {
+    width: 50%; /* רוחב הקוביה */
+    padding: 20px; /* ריווח פנימי */
+    background-color: #E57F90; /* צבע הרקע של הקוביה */
+    border-radius: 50px; /* פינות מעוגלות */
+    margin: 0 auto 70px; /* ריווח בין הקוביה לפוטר, מרכז את הקוביה */
+}
+
+    .card .row {
+        width: 100%; /* רוחב מלא */
+        display: grid; /* שימוש בגריד לפריסה */
+        grid-template-columns: repeat(2, 1fr); /* שתי עמודות */
+        grid-gap: 15px; /* מרווח בין עמודות */
+    }
+
+        .card .row .col {
+            width: 100%; /* רוחב מלא */
+            margin: 10px 0; /* רווח פנימי עליון ותחתון */
+        }
+
+            .card .row .col.full-width {
+                grid-column: span 2; /* עמודה שתחזיק בשני טורים */
+            }
+
+            .card .row .col.centered {
+                text-align: center; /* יישור טקסט למרכז */
+            }
+
+        .card .row .form-group {
+            width: 100%; /* רוחב מלא */
+            color: #ffffff; /* צבע טקסט */
+        }
+
+            .card .row .form-group input,
+            .card .row .form-group textarea,
+            .card .row .form-group select {
+                width: 100%; /* רוחב מלא */
+                background: #ffffff; /* צבע לבן לשדות הקלט */
+                outline: none; /* הסרת מסגרת ברירת מחדל */
+                font-size: 16px; /* גודל טקסט */
+                padding: 8px 16px; /* ריווח פנימי */
+                border: none; /* אין מסגרת */
+                color: #000000; /* צבע טקסט שחור */
+                border-radius: 50px; /* פינות מעוגלות */
+                font-family: 'Rubik', sans-serif; /* פונט */
+            }
+
+            .card .row .form-group textarea {
+                height: auto; /* שדה פתוח גדול יותר להערות */
+                resize: none; /* הסרת אפשרות שינוי גודל השדה */
+            }
+
+            .card .row .form-group label {
+                line-height: 1.2; /* גובה שורה */
+                color: #ffffff; /* צבע טקסט */
+                font-size: 16px; /* גודל טקסט */
+                margin: 0 0 5px 0; /* רווח תחתון */
+                display: block; /* הצגת בלוק */
+                pointer-events: none; /* הסרת אירועי עכבר */
+                font-family: 'Rubik', sans-serif; /* פונט */
+            }
+
+        .card .row input[type="submit"] {
+            padding: 10px; /* ריווח פנימי */
+            cursor: pointer; /* שינוי סמן העכבר */
+            outline: none; /* הסרת מסגרת ברירת מחדל */
+            background: #ffffff; /* צבע לבן לכפתור */
+            text-transform: uppercase; /* המרה לאותיות גדולות */
+            color: #6A007C; /* צבע טקסט של הכפתור */
+            line-height: 40px; /* גובה שורה */
+            font-size: 18px; /* גודל טקסט */
+            font-weight: 700; /* עובי טקסט */
+            border-radius: 45px; /* פינות מעוגלות */
+            transition: all 0.4s; /* זמן מעבר */
+            font-family: 'Rubik', sans-serif; /* פונט */
+            width: 30%; /* רוחב הכפתור */
+            margin: 20px auto 0 auto; /* ממורכז עם רווח מעל */
+        }
+
+            .card .row input[type="submit"]:hover {
+                background: #6A007C; /* צבע רקע על רחף */
+                color: #ffffff; /* צבע טקסט על רחף */
+                transition: all 0.4s; /* זמן מעבר */
+            }
+
+@media screen and (max-width: 900px) {
+    .card {
+        width: 90%; /* רוחב מלא על מסך קטן */
+        padding: 15px; /* ריווח פנימי קטן יותר */
+    }
+
+        .card .row {
+            grid-template-columns: 1fr; /* עמודה אחת */
+        }
+
+            .card .row input[type="submit"] {
+                width: 100%; /* רוחב מלא לכפתור */
+            }
+}

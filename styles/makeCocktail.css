@@ -1,0 +1,66 @@
+﻿.page-title {
+    font-family: 'GveretLevinAlefAlefAlef', Arial, sans-serif; /* הגדרת הפונט */
+    font-size: 36px; /* גודל הפונט */
+    color: #6A007C; /* צבע הפונט */
+    text-align: center; /* יישור למרכז */
+    margin-top: 120px; /* ריווח עליון לכותרת */
+    font-weight: normal; /* הסרת הדגשה */
+}
+
+.cocktails-container {
+    display: flex; /* הגדרת תצוגה כ-flexbox */
+    justify-content: center; /* יישור התוכן למרכז בציר האופקי */
+    align-items: flex-end; /* יישור התוכן לתחתית בציר האנכי */
+    margin-top: 40px; /* ריווח עליון למיכל */
+    gap: 150px; /* ריווח בין הפריטים */
+}
+
+.cocktail-item {
+    text-align: center; /* יישור טקסט למרכז */
+    display: flex; /* הגדרת תצוגה כ-flexbox */
+    flex-direction: column; /* סידור פריטים בעמודה */
+    align-items: center; /* יישור פריטים למרכז בציר האופקי */
+}
+
+    .cocktail-item img {
+        transition: transform 0.3s; /* מעבר חלק על הובר */
+    }
+
+        .cocktail-item img.mojito {
+            height: 180px; /* גובה לתמונה של מוחיטו */
+            width: auto; /* רוחב אוטומטי */
+            margin-top: 0; /* ביטול ריווח עליון */
+        }
+
+        .cocktail-item img.margarita {
+            height: 180px; /* גובה לתמונה של מרגריטה */
+            width: auto; /* רוחב אוטומטי */
+            margin-top: 0; /* ביטול ריווח עליון */
+        }
+
+        .cocktail-item img.bloodyMary {
+            height: 190px; /* גובה לתמונה של בלאדי מרי */
+            width: auto; /* רוחב אוטומטי */
+            margin-top: 0; /* ביטול ריווח עליון */
+        }
+
+        .cocktail-item img:hover {
+            transform: scale(1.1); /* הגדלה בהובר */
+        }
+
+    .cocktail-item p {
+        font-family: 'GveretLevinAlefAlefAlef', Arial, sans-serif; /* הגדרת הפונט */
+        font-size: 20px; /* גודל הפונט */
+        color: #00796b; /* צבע הפונט */
+        margin-top: 10px; /* ריווח עליון לפסקה */
+        text-align: center; /* יישור טקסט למרכז */
+        padding-left: 10px; /* ריווח שמאלי לפסקה */
+    }
+
+        .cocktail-item p.margarita {
+            padding-left: 20px; /* ריווח שמאלי לפסקה של מרגריטה */
+        }
+
+        .cocktail-item p.bloodyMary {
+            padding-left: 30px; /* ריווח שמאלי לפסקה של בלאדי מרי */
+        }

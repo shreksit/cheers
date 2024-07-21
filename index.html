@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>צ'ירס - מערבבים חוויות לוגמים הרפתקאות</title>
+    <link rel="stylesheet" href="styles/myStyle.css">
+    <link rel="stylesheet" href="styles/homePage.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src="images/logo.png" class="logo" alt="לוגו של האתר"></a></li>
+                <li><a href="#" class="nav-link">מצא קוקטייל</a></li>
+                <li class="dropdown">
+                    <a href="htmls/makeCocktail.html" class="nav-link">הכן קוקטייל</a>
+                    <div class="dropdown-content">
+                        <a href="htmls/mojito.html">מוחיטו</a>
+                        <a href="#">מרגריטה</a>
+                        <a href="#">בלאדי מרי</a>
+                    </div>
+                </li>
+                <li><a href="htmls/barsRecommendations.html" class="nav-link">המלצות ברים</a></li>
+                <li><a href="htmls/contactUs.html" class="nav-link">צור קשר</a></li>
+                <li><a href="htmls/about.html" class="nav-link">אודותינו</a></li>
+                <li><a href="htmls/siteMap.html" class="nav-link">מפת אתר</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-text">
+                <h1>צ'ירס</h1>
+                <p class="hero-slogan">מערבבים חוויות לוגמים הרפתקאות</p>
+                <p class="hero-subtext">בעזרתנו תמצאו את הקוקטייל שמתאים לכם בקלות!</p>
+                <a href="#find-cocktail"><img src="images/hero-arrow.png" alt="חץ לגלילה למטה" class="hero-arrow"></a>
+            </div>
+        </section>
+        <section id="find-cocktail">
+            <h2>מצא קוקטיילים</h2>
+            <div class="gallery">
+                <div class="cocktail-item">
+                    <img src="images/sweetIcon.png" alt="קוקטייל מתוק" class="cocktail-icon" onclick="location.href='#'">
+                    <p class="cocktail-label">מתוק</p>
+                </div>
+                <div class="cocktail-item">
+                    <img src="images/spicyIcon.png" alt="קוקטייל חריף" class="cocktail-icon" onclick="location.href='#'">
+                    <p class="cocktail-label">חריף</p>
+                </div>
+                <div class="cocktail-item">
+                    <img src="images/sourIcon.png" alt="קוקטייל חמוץ" class="cocktail-icon" onclick="location.href='#'">
+                    <p class="cocktail-label">חמוץ</p>
+                </div>
+                <div class="cocktail-item">
+                    <img src="images/moctailIcon.png" alt="מוקטייל" class="cocktail-icon" onclick="location.href='#'">
+                    <p class="cocktail-label">לנהג התורן</p>
+                </div>
+                <div class="cocktail-item">
+                    <img src="images/sparklyIcon.png" alt="קוקטייל מבעבע" class="cocktail-icon" onclick="location.href='#'">
+                    <p class="cocktail-label">מבעבע</p>
+                </div>
+            </div>
+        </section>
+        <section id="find-bars">
+            <h2>הברים האהובים עלינו</h2>
+            <div class="bars-gallery">
+                <div class="bar-item">
+                    <img src="images/bellboy.png" alt="בל בוי" class="bar-image">
+                    <p class="bar-name" style="color:#0038C4;">בל בוי</p>
+                    <button class="bar-button" onclick="location.href='htmls/barsRecommendations.html?bar=bellboy'">קרא עוד</button>
+                </div>
+                <div class="bar-item">
+                    <img src="images/concierge.png" alt="קונסיירג'" class="bar-image">
+                    <p class="bar-name" style="color:#0038C4;">קונסיירג'</p>
+                    <button class="bar-button" onclick="location.href='htmls/barsRecommendations.html?bar=concierge'">קרא עוד</button>
+                </div>
+                <div class="bar-item">
+                    <img src="images/imperial.png" alt="אימפריאל" class="bar-image">
+                    <p class="bar-name" style="color:#0038C4;">אימפריאל</p>
+                    <button class="bar-button" onclick="location.href='htmls/barsRecommendations.html?bar=imperial'">קרא עוד</button>
+                </div>
+                <div class="bar-item">
+                    <img src="images/fantastic.png" alt="פנטסטיק" class="bar-image">
+                    <p class="bar-name" style="color:#0038C4;">פנטסטיק</p>
+                    <button class="bar-button" onclick="location.href='htmls/barsRecommendations.html?bar=fantastic'">קרא עוד</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 נועה טננבאום ואופיר שרעבי</p>
+        <p><a href="htmls/about.html">אודותינו</a> | <a href="htmls/contactUs.html">צור קשר</a> | <a href="htmls/siteMap.html">מפת אתר</a></p>
+    </footer>
+
+    <script>
+        document.querySelector('.hero-arrow').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector('#find-cocktail').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+    <script src="jScripts/JavaScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+﻿main {
+    flex: 1; /* מאפשר למיכל הראשי להתפרש ולתפוס את כל השטח הפנוי */
+    padding-top: 100px; /* מרחק עליון להפרדה בין המיכל לכותרת */
+    background-color: #FFFFD7; /* צבע רקע */
+}
+
+.about-title {
+    font-family: 'GveretLevinAlefAlefAlef', Arial, sans-serif; /* הגדרת פונט */
+    font-size: 36px; /* גודל הפונט */
+    color: #6A007C; /* צבע הפונט */
+    text-align: center; /* יישור למרכז */
+    margin-top: 10px; /* מרווח עליון */
+}
+
+.about-text {
+    font-family: 'Rubik', Arial, sans-serif; /* הגדרת פונט */
+    font-size: 16px; /* גודל הפונט */
+    color: #333; /* צבע הפונט */
+    text-align: center; /* יישור למרכז */
+    margin: 10px auto; /* מרווח עליון ותחתון */
+    width: 60%; /* רוחב של 60% מהמסך */
+    line-height: 1.6; /* גובה שורה */
+    margin-bottom: 40px; /* מרווח תחתון */
+}
+
+.image-section {
+    position: relative; /* מיקום יחסי */
+    display: flex; /* תצוגת flex */
+    flex-direction: column; /* סידור בעמודה */
+    align-items: center; /* יישור למרכז אופקי */
+    width: 100%; /* רוחב מלא */
+    padding-top: 40px; /* ריווח עליון */
+    padding-bottom: 40px; /* ריווח תחתון */
+    background-image: url('../images/bg-about.png'); /* הוספת תמונת רקע */
+    background-size: cover; /* התאמת גודל התמונה */
+    background-position: center; /* מיקום התמונה במרכז */
+    background-repeat: no-repeat; /* מניעת חזרה על התמונה */
+}
+
+.people {
+    display: flex; /* תצוגת flex */
+    justify-content: center; /* יישור למרכז אופקי */
+    gap: 50px; /* מרווח בין הפריטים */
+    margin-top: 20px; /* ריווח עליון */
+}
+
+.person {
+    text-align: center; /* יישור למרכז */
+    transition: transform 0.3s; /* מעבר חלק */
+}
+
+    .person:hover {
+        transform: scale(1.1); /* הגדלה בהובר */
+    }
+
+    .person img {
+        width: 200px; /* רוחב התמונה */
+        height: auto; /* גובה אוטומטי */
+        border-radius: 50%; /* עיגול הפינות */
+        margin-bottom: 10px; /* ריווח תחתון */
+    }
+
+.person-name {
+    font-family: 'GveretLevinAlefAlefAlef', Arial, sans-serif; /* הגדרת פונט */
+    color: #DB5681; /* צבע הפונט */
+    font-size: 18px; /* גודל הפונט */
+}
+
+.pages {
+    background-color: #C5EDAC; /* צבע רקע */
+    padding: 40px 20px; /* ריווח פנימי */
+    text-align: center; /* יישור למרכז */
+    flex: 1; /* מאפשר למיכל להתפרש ולתפוס את כל השטח הפנוי */
+    display: flex; /* תצוגת flex */
+    flex-direction: column; /* סידור בעמודה */
+    justify-content: space-between; /* ריווח שווה בין פריטים */
+}
+
+.pages-title {
+    font-family: 'GveretLevinAlefAlefAlef', Arial, sans-serif; /* הגדרת פונט */
+    font-size: 36px; /* גודל הפונט */
+    color: #6A007C; /* צבע הפונט */
+    margin-bottom: 40px; /* ריווח תחתון */
+}
+
+.screens-container {
+    flex-grow: 1; /* מאפשר למיכל לגדול ולתפוס את כל השטח הפנוי */
+    display: flex; /* תצוגת flex */
+    flex-direction: column; /* סידור בעמודה */
+    justify-content: center; /* יישור למרכז אנכי */
+    align-items: center; /* יישור למרכז אופקי */
+    gap: 20px; /* ריווח בין הפריטים */
+    margin-bottom: 40px; /* ריווח תחתון */
+}
+
+.screens-row {
+    display: flex; /* תצוגת flex */
+    justify-content: center; /* יישור למרכז אופקי */
+    gap: 20px; /* ריווח בין הפריטים */
+}
+
+.screen-box {
+    background-color: white; /* צבע רקע */
+    color: #6A007C; /* צבע הטקסט */
+    border-radius: 20px; /* עיגול פינות */
+    padding: 20px; /* ריווח פנימי */
+    text-align: center; /* יישור למרכז */
+    font-family: 'Rubik', Arial, sans-serif; /* הגדרת פונט */
+    font-size: 18px; /* גודל הפונט */
+    text-decoration: none; /* הסרת קו תחתון */
+    width: 200px; /* רוחב */
+    transition: transform 0.3s, background-color 0.3s; /* מעבר חלק */
+}
+
+    .screen-box:hover {
+        transform: scale(1.05); /* הגדלה בהובר */
+        background-color: #e0f7be; /* שינוי צבע רקע בהובר */
+    }
+
+.about-text {
+    font-family: 'Rubik', Arial, sans-serif; /* הגדרת פונט */
+    font-size: 16px; /* גודל הפונט */
+    color: #333; /* צבע הטקסט */
+    text-align: center; /* יישור למרכז */
+    margin: 10px auto; /* מרווח עליון ותחתון */
+    width: 60%; /* רוחב של 60% מהמסך */
+    line-height: 1.6; /* גובה שורה */
+}
+
+.image-section {
+    display: flex; /* תצוגת flex */
+    flex-direction: column; /* סידור בעמודה */
+    align-items: center; /* יישור למרכז אופקי */
+    width: 100%; /* רוחב מלא */
+    padding-top: 40px; /* ריווח עליון */
+    padding-bottom: 40px; /* ריווח תחתון */
+    background-image: url('../images/bg-about.png'); /* הוספת תמונת רקע */
+    background-size: cover; /* התאמת גודל התמונה */
+    background-position: center; /* מיקום התמונה במרכז */
+    background-repeat: no-repeat; /* מניעת חזרה על התמונה */
+}
+
+.people {
+    display: flex; /* תצוגת flex */
+    justify-content: center; /* יישור למרכז אופקי */
+    gap: 50px; /* מרווח בין הפריטים */
+    margin-top: 20px; /* ריווח עליון */
+}
+
+.person {
+    text-align: center; /* יישור למרכז */
+    transition: transform 0.3s; /* מעבר חלק */
+}
+
+    .person:hover {
+        transform: scale(1.1); /* הגדלה בהובר */
+    }
+
+    .person img {
+        width: 200px; /* רוחב התמונה */
+        height: auto; /* גובה אוטומטי */
+        border-radius: 50%; /* עיגול הפינות */
+        margin-bottom: 10px; /* ריווח תחתון */
+    }
+
+.person-name {
+    font-family: 'GveretLevinAlefAlefAlef', Arial, sans-serif; /* הגדרת פונט */
+    color: #DB5681; /* צבע הפונט */
+    font-size: 18px; /* גודל הפונט */
+}
